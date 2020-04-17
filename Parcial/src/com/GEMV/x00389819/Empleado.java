@@ -1,6 +1,6 @@
 package com.GEMV.x00389819;
 
-public class Empleado {
+public abstract class Empleado {
     protected String nombre;
     protected String puesto;
     protected double salario;
