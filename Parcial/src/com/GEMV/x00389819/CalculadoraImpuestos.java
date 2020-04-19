@@ -11,7 +11,7 @@ public class CalculadoraImpuestos{
 
     public static double calcularPago(Empleado check) throws IllegalArgumentException {
         if(check.salario <= 0){
-            throw new IllegalArgumentException("El salario no puede ser negativo!");
+            throw new IllegalArgumentException("El salario no puede ser negativo o cero!");
         }
 
         double pago;
