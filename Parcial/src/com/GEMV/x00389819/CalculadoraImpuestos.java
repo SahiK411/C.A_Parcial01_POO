@@ -9,9 +9,9 @@ public class CalculadoraImpuestos{
     //Methods
     private CalculadoraImpuestos(){ }
 
-    public static double calcularPago(Empleado check) throws Exception {
+    public static double calcularPago(Empleado check) throws IllegalArgumentException {
         if(check.salario <= 0){
-            throw new Exception();
+            throw new IllegalArgumentException("El salario no puede ser negativo!");
         }
 
         double pago;
@@ -34,7 +34,7 @@ public class CalculadoraImpuestos{
 
             double Restante = check.salario - AFP - ISSS;
             double Renta;
-            if(Restante > 0.01d && Restante <= 472.00d){
+            if(Restante >= 0.01d && Restante <= 472.00d){
                 Renta = 0d;
             }
             else if(Restante <= 895.24d){
